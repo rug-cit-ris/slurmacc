@@ -77,10 +77,6 @@ def getargs():
     try:
          startdate = pandas.Timestamp(options.startdate)
          enddate = pandas.Timestamp(options.enddate)
-#        startdate = options.startdate.split('-')
-#        enddate = options.enddate.split('-')
-#        options.startdate=datetime.date(int(startdate[0]),int(startdate[1]),int(startdate[2]))
-#        options.enddate=datetime.date(int(enddate[0]),int(enddate[1]),int(enddate[2]))
     except:
         parser.error("Wrong date specified for -s or -e, use the format YYYY-MM-DD")
     if len(args) !=0:
