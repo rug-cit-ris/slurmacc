@@ -153,7 +153,7 @@ def main():
     usageTable = getUsageTable(usage, users)
 
     if options.researchgroup:
-       usageTable = usageTable.groupby(['Department','Account']).sum()
+       usageTable = usageTable.groupby(['Department','Account','Faculty']).sum()
 
     if options.faculty:
        usageTable = usageTable.groupby(['Faculty','Account']).sum()
